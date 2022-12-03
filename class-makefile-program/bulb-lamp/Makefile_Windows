@@ -1,0 +1,33 @@
+# Makefile written for Windows
+# Main differences from Linux:
+##	Executable filenames must have .exe (not needed in compilation but will be needed for 'make clean')
+##	Remove files using 'del' instead of 'rm -f'
+##	makedepend is normally not available
+
+# Definition of variables
+SRCS    = bulb.cpp lamp.cpp lamp-test.cpp
+OBJS    = $(SRCS:.cpp=.o)
+DEPS    = $(OBJS:.o=.d)
+EXE     = lamp-test.exe
+CPPFLAGS = -std=c++11
+
+# The first defined rule is run when using 'make'; same is achieved by running 'make all'
+all: $(EXE)
+
+# Rules' Format 
+# TARGET: DEPENDENCIES
+# [TAB]   COMMAND USED TO CREATE THE TARGET
+
+# $(VAR) is replaced with the VAR variable defined above
+$(EXE): $(OBJS)
+		g++ $(CPPFLAGS) -o $@ $(OBJS)
+
+# To include the .d dependency files
+-include $(DEPS)
+
+# -MMD -MP creates the .d dependency files
+.cpp.o:;	g++ $(CPPFLAGS) -MMD -MP -c $<
+
+# For removing the objects/executable files
+clean:
+		del  $(OBJS) $(DEPS) $(EXE)	 

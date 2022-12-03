@@ -1,0 +1,36 @@
+A hacker who as a teen cracked the encryption on DVDs has found a way to
+unlock the code that prevents iPod users from playing songs from download
+music stores other than Apple Computer Inc.'s iTunes, his company said on
+Tuesday.
+
+Jon Lech Johansen, a 22-year-old Norway native who lives in San Francisco,
+cracked Apple's FairPlay copy-protection technology, said Monique Farantzos,
+managing director at DoubleTwist, the company that plans to license the code
+to businesses. 
+	
+"What he did was basically reverse-engineer FairPlay," she said. "This allows
+other companies to offer content for the iPod." 
+
+At the moment, Apple aims to keep music bought from its iTunes online music
+store only available for Apple products, while songs bought from other online
+stores typically do not work on iPods.
+
+But Johansen's technology could help rivals sell competing products that play
+music from iTunes and offer songs for download that work on iPods as they seek
+to take a bite out of Apple's dominance of digital music. 
+
+ITunes commands an 88 percent share of legal song downloads in the United
+States, while the iPod dominates digital music player sales with more than 60
+percent of the market. 
+
+Cupertino, California-based Apple, whose profits have soared in recent years
+on the strength of the iPod, declined to comment. 
+
+Johansen, known as DVD Jon, gained fame when at the age of 15 he wrote and
+distributed a program that cracked the encryption codes on DVDs. This allowed
+DVDs to be copied and played back on any device. 
+
+His latest feat could help companies such as Microsoft Corp., Nokia, Sony
+Ericsson and Samsung Electronics Co. Ltd., which have all announced plans over
+the past few months for music download services combined with new devices to
+challenge Apple. 

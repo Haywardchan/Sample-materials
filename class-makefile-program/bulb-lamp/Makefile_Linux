@@ -1,0 +1,34 @@
+# Makefile written for Linux/Mac OS
+
+# Definition of variables
+SRCS    = bulb.cpp lamp.cpp lamp-test.cpp
+OBJS    = $(SRCS:.cpp=.o)
+EXE     = lamp-test
+CPPFLAGS = -std=c++11
+
+# The first defined rule is run when using 'make'; same is achieved by running 'make all'
+all: $(EXE)
+
+# Rules' Format 
+# TARGET: DEPENDENCIES
+# [TAB]   COMMAND USED TO CREATE THE TARGET
+
+# $(VAR) is replaced with the VAR variable defined above
+$(EXE): $(OBJS)
+		g++ $(CPPFLAGS) -o $@ $(OBJS)
+
+# Meta-rule: Creates one rule for each .o file
+%.o: %.cpp
+		g++ $(CPPFLAGS) -c $< -o $@
+
+# For removing the objects/executable files
+clean:
+		rm -f  $(OBJS) $(EXE)
+
+# Utility 'makedepend' finds the .h dependencies automatically
+depend:;	makedepend $(SRCS)
+# DO NOT DELETE
+
+bulb.o: bulb.h
+lamp.o: lamp.h bulb.h
+lamp-test.o: lamp.h bulb.h
